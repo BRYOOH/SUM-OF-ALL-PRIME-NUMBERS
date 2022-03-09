@@ -1,0 +1,29 @@
+import java.util.*;
+public class Prime{
+
+public static void main(String[] args){
+    System.out.println("Enter the prime number limit;");
+    int limit=0;
+    int sum= 0;
+    Scanner scan= new Scanner(System.in);
+    limit= scan.nextInt();
+    scan.close();
+    for(int i=2;i<=limit;i++){
+        boolean primeNo= true;
+        for(int k=2;k<i; k++){
+            while(i%k==0){
+                primeNo= false;
+                break;
+            }
+            
+        }
+        if(primeNo){
+            System.out.println( i+ "is a prime number");
+            sum= sum+ i;
+            
+        }
+    }
+    System.out.println("The sum of all prime numbers is"+ sum);
+    
+}
+}
